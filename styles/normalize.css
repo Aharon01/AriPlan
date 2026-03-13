@@ -1,0 +1,96 @@
+/* Убираем различия между браузерами */
+html {
+  line-height: 1.15; /* исправление дефолтного line-height для body */
+  -webkit-text-size-adjust: 100%; /* предотвращает масштабирование текста на iOS */
+}
+
+body {
+  margin: 0;
+}
+
+/* Заголовки и шрифты */
+main, h1, h2, h3, h4, h5, h6, p, blockquote, pre {
+  margin: 0;
+  font-weight: normal;
+}
+
+/* Списки */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Ссылки */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Формы */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  border: none;
+  background: none;
+  padding: 0;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Изображения */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Таблицы */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* hidden элементы */
+[hidden] {
+  display: none !important;
+}
+
+/* Сбрасываем fieldset и legend */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+legend {
+  padding: 0;
+}
+
+/* Аудио/видео элементы */
+audio, video {
+  display: inline-block;
+}
+
+/* Сбрасываем checkbox/radio дефолтные отступы */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Код и pre */
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Сброс внешних отступов для всех элементов, кроме body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

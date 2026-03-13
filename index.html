@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="AriPlan — простое веб-приложение для управления задачами">
+		<link rel="stylesheet"	href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/airbnb.css"/>
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/style.css" />
+		<title>AriPlan</title>
+	</head>
+	<body>
+		<main class="app">
+			<div class="header">
+				<h1 class="title">AriPlan</h1>
+				<button id="toggle-theme" aria-label="Переключить тему">🌙</button>
+			</div>
+			<div class="task-input">
+				<label for="task-input" class="sr-only">Ввести задачу</label>
+				<input type="text" id="task-input" placeholder="Ввести задачу" />
+				<label for="deadline-input" class="sr-only">
+					Выбрать дату дедлайна
+				</label>
+				<input id="deadline-input" />
+				<button id="add-btn">Добавить задачу</button>
+				<button id="task-filter">Только невыполненные</button>
+				<button id="clear-done" aria-label="Удалить выполненные задачи">
+					Удалить выполненные
+				</button>
+			</div>
+			<ul id="task-list"></ul>
+		</main>
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+		<script type="module" src="main.js" defer></script>
+	</body>
+</html>
