@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="AriPlan — простое веб-приложение для управления задачами">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="styles/normalize.css">
+		<link rel="stylesheet" href="styles/calendar.css">
+		<link rel="stylesheet" href="styles/style.css" />
+		<title>AriPlan</title>
+	</head>
+	<body>
+		<header class="header">
+			<p class="out"></p>
+		</header>
+		<main class="app">
+			<div class="app_header">
+				<h1 class="title">AriPlan</h1>
+				<button id="toggle-theme" aria-label="Переключить тему">
+					<i class="fa-regular fa-moon"></i>
+				</button>
+			</div>
+			<div class="task-input">
+				<label for="task-input" class="sr-only">Ввести задачу</label>
+				<input type="text" id="task-input" class="input-base" placeholder="Ввести задачу" />
+				<span id="task-error" class="error-message"></span>
+				<label for="deadline-input" class="sr-only">
+					Выбрать дату дедлайна
+				</label>
+				<input type="text" id="deadline-input" class="input-base" placeholder="Ввести дедлайн"/>
+				<div id="calendar" class="calendar"></div>
+
+				<button id="add-btn">Добавить</button>
+				<button id="task-filter">Только невыполненные</button>
+				<button id="clear-done" aria-label="Удалить выполненные задачи">
+					Удалить выполненные
+				</button>
+			</div>
+			<ul id="task-list"></ul>
+		</main>
+		<script type="module" src="main.js" defer></script>
+	</body>
+</html>
